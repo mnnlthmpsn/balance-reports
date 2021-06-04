@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cat desc:</strong>
+  <%= @category_master.cat_desc %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @category_master.comment %>
+</p>
+
+<p>
+  <strong>Active status:</strong>
+  <%= @category_master.active_status %>
+</p>
+
+<p>
+  <strong>Del status:</strong>
+  <%= @category_master.del_status %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @category_master.user_id %>
+</p>
+
+<p>
+  <strong>Integer:</strong>
+  <%= @category_master.integer %>
+</p>
+
+<%= link_to 'Edit', edit_category_master_path(@category_master) %> |
+<%= link_to 'Back', category_masters_path %>

@@ -1,0 +1,71 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cost Uploads</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>File upload</th>
+      <th>Name</th>
+      <th>Category</th>
+      <th>Source</th>
+      <th>Debit1</th>
+      <th>Debit2</th>
+      <th>Credit1</th>
+      <th>Credit2</th>
+      <th>Subtotal debit1</th>
+      <th>Subtotal debit2</th>
+      <th>Subtotal credit1</th>
+      <th>Subtotal credit2</th>
+      <th>Net profit1</th>
+      <th>Net profit2</th>
+      <th>Net loss1</th>
+      <th>Net loss2</th>
+      <th>Period start1</th>
+      <th>Period start2</th>
+      <th>Period end1</th>
+      <th>Period end2</th>
+      <th>Active status</th>
+      <th>Del status</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cost_uploads.each do |cost_upload| %>
+      <tr>
+        <td><%= cost_upload.file_upload_id %></td>
+        <td><%= cost_upload.name %></td>
+        <td><%= cost_upload.category %></td>
+        <td><%= cost_upload.source %></td>
+        <td><%= cost_upload.debit1 %></td>
+        <td><%= cost_upload.debit2 %></td>
+        <td><%= cost_upload.credit1 %></td>
+        <td><%= cost_upload.credit2 %></td>
+        <td><%= cost_upload.subtotal_debit1 %></td>
+        <td><%= cost_upload.subtotal_debit2 %></td>
+        <td><%= cost_upload.subtotal_credit1 %></td>
+        <td><%= cost_upload.subtotal_credit2 %></td>
+        <td><%= cost_upload.net_profit1 %></td>
+        <td><%= cost_upload.net_profit2 %></td>
+        <td><%= cost_upload.net_loss1 %></td>
+        <td><%= cost_upload.net_loss2 %></td>
+        <td><%= cost_upload.period_start1 %></td>
+        <td><%= cost_upload.period_start2 %></td>
+        <td><%= cost_upload.period_end1 %></td>
+        <td><%= cost_upload.period_end2 %></td>
+        <td><%= cost_upload.active_status %></td>
+        <td><%= cost_upload.del_status %></td>
+        <td><%= cost_upload.user_id %></td>
+        <td><%= link_to 'Show', cost_upload %></td>
+        <td><%= link_to 'Edit', edit_cost_upload_path(cost_upload) %></td>
+        <td><%= link_to 'Destroy', cost_upload, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cost Upload', new_cost_upload_path %>

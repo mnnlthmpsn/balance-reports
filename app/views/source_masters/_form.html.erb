@@ -1,0 +1,42 @@
+<%= form_with(model: source_master) do |form| %>
+  <% if source_master.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(source_master.errors.count, "error") %> prohibited this source_master from being saved:</h2>
+
+      <ul>
+        <% source_master.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :source_desc %>
+    <%= form.text_field :source_desc %>
+  </div>
+
+  <div class="field">
+    <%= form.label :comment %>
+    <%= form.text_area :comment %>
+  </div>
+
+  <div class="field">
+    <%= form.label :active_status %>
+    <%= form.check_box :active_status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :del_status %>
+    <%= form.check_box :del_status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.number_field :user_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

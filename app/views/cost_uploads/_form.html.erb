@@ -1,0 +1,35 @@
+
+<%= simple_form_for(@cost_upload) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :file_upload_id %>
+    <%= f.input :name %>
+    <%= f.input :category %>
+    <%= f.input :source %>
+    <%= f.input :debit1 %>
+    <%= f.input :debit2 %>
+    <%= f.input :credit1 %>
+    <%= f.input :credit2 %>
+    <%= f.input :subtotal_debit1 %>
+    <%= f.input :subtotal_debit2 %>
+    <%= f.input :subtotal_credit1 %>
+    <%= f.input :subtotal_credit2 %>
+    <%= f.input :net_profit1 %>
+    <%= f.input :net_profit2 %>
+    <%= f.input :net_loss1 %>
+    <%= f.input :net_loss2 %>
+    <%= f.input :period_start1 %>
+    <%= f.input :period_start2 %>
+    <%= f.input :period_end1 %>
+    <%= f.input :period_end2 %>
+    <%= f.input :active_status %>
+    <%= f.input :del_status %>
+    <%= f.input :user_id %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

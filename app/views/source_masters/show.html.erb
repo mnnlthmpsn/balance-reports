@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Source desc:</strong>
+  <%= @source_master.source_desc %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @source_master.comment %>
+</p>
+
+<p>
+  <strong>Active status:</strong>
+  <%= @source_master.active_status %>
+</p>
+
+<p>
+  <strong>Del status:</strong>
+  <%= @source_master.del_status %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @source_master.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_source_master_path(@source_master) %> |
+<%= link_to 'Back', source_masters_path %>

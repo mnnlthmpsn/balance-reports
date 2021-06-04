@@ -1,0 +1,51 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  file_upload_id: 1
+  name: MyString
+  category: MyString
+  source: MyString
+  debit1: 1
+  debit2: 1
+  credit1: 1
+  credit2: 1
+  subtotal_debit1: 1
+  subtotal_debit2: 1
+  subtotal_credit1: 1
+  subtotal_credit2: 1
+  net_profit1: 1
+  net_profit2: 1
+  net_loss1: 1
+  net_loss2: 1
+  period_start1: MyString
+  period_start2: MyString
+  period_end1: MyString
+  period_end2: MyString
+  active_status: false
+  del_status: false
+  user_id: 1
+
+two:
+  file_upload_id: 1
+  name: MyString
+  category: MyString
+  source: MyString
+  debit1: 1
+  debit2: 1
+  credit1: 1
+  credit2: 1
+  subtotal_debit1: 1
+  subtotal_debit2: 1
+  subtotal_credit1: 1
+  subtotal_credit2: 1
+  net_profit1: 1
+  net_profit2: 1
+  net_loss1: 1
+  net_loss2: 1
+  period_start1: MyString
+  period_start2: MyString
+  period_end1: MyString
+  period_end2: MyString
+  active_status: false
+  del_status: false
+  user_id: 1

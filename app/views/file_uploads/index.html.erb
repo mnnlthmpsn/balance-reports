@@ -1,0 +1,70 @@
+<nav class="navbar navbar-light navbar-expand-md shadow-sm">
+  <div class="container-fluid">
+    <ul class="navbar-nav d-lg-flex flex-grow-1 flex-sm-grow-1 flex-md-grow-1 flex-lg-grow-1 justify-content-lg-end flex-xl-grow-1">
+      <li class="nav-item">
+        <%= link_to generated_reports_path do %>
+          <button class="btn btn-secondary btn-sm py-2 px-4" type="button" style="background: #00c993;border-style: none;">
+            <i class="fa fa-list-ul" style="margin-right: 4px;"></i>
+            All Generated Reports
+          </button>
+        <% end %>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="container">
+
+<!--  upload field-->
+  <%= simple_form_for :file, :url => (import_path(@file_upload)) do |f| %>
+    <div class="row justify-content-center my-5">
+      <%= file_field_tag :file, accept: '.csv',class: "form-control col-8", required: true, label: false %>
+      <%= f.button :submit, 'Import File', class: "btn btn-secondary ml-3" %>
+    </div>
+  <% end %>
+<!--  upload field end-->
+
+  <div class="card shadow">
+    <div class="card-header py-3">
+      <div class="row d-lg-flex align-items-lg-center">
+        <div class="col">
+          <p class="text-primary m-0 font-weight-bold" style="color: #00c993 !important;">Uploaded Reports</p>
+        </div>
+        <div class="col-md-6">
+          <div class="text-md-right dataTables_filter" id="dataTable_filter"><label><input type="search" class="form-control form-control" aria-controls="dataTable" placeholder="Search"></label></div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="table-responsive table mt-2" id="dataTable-1" role="grid" aria-describedby="dataTable_info">
+        <table class="table my-0" id="dataTable">
+          <thead>
+          <th class="col-1">#</th>
+          <th>Report</th>
+          <th class="col-4"></th>
+          </thead>
+          <tbody>
+          <td>1</td>
+          <td>
+            <a href="#">
+              2021_09_12_balance_sheet_first_quarter_place_holder.csv
+            </a>
+          </td>
+          <td class="text-right">
+            <button class="btn btn-secondary btn-sm" style="background: #00c993;border-style: none;">Generate</button>
+          </td>
+            <%# if !@file_uploads.empty? %>
+              <%# @file_uploads.each_with_index do |file, index|%>
+<!--                <td><%#= index %></td>-->
+<!--                <td><%#= file.file_name %></td>-->
+              <%# end %>
+            <%# else %>
+<!--              <td colspan="3">-->
+<!--                <p class="text-center mt-3">No uploads done yet</p>-->
+<!--              </td>-->
+            <%# end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

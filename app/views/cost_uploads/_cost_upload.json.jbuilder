@@ -1,0 +1,2 @@
+json.extract! cost_upload, :id, :file_upload_id, :name, :category, :source, :debit1, :debit2, :credit1, :credit2, :subtotal_debit1, :subtotal_debit2, :subtotal_credit1, :subtotal_credit2, :net_profit1, :net_profit2, :net_loss1, :net_loss2, :period_start1, :period_start2, :period_end1, :period_end2, :active_status, :del_status, :user_id, :created_at, :updated_at
+json.url cost_upload_url(cost_upload, format: :json)

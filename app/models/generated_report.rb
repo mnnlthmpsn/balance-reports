@@ -1,0 +1,2 @@
+class GeneratedReport < ApplicationRecord
+end

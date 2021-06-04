@@ -1,0 +1,2 @@
+class CostUpload < ApplicationRecord
+end

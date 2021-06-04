@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cost upload:</strong>
+  <%= @generated_report.cost_upload_id %>
+</p>
+
+<p>
+  <strong>Report file name:</strong>
+  <%= @generated_report.report_file_name %>
+</p>
+
+<p>
+  <strong>Report file path:</strong>
+  <%= @generated_report.report_file_path %>
+</p>
+
+<p>
+  <strong>Active status:</strong>
+  <%= @generated_report.active_status %>
+</p>
+
+<p>
+  <strong>Del status:</strong>
+  <%= @generated_report.del_status %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @generated_report.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_generated_report_path(@generated_report) %> |
+<%= link_to 'Back', generated_reports_path %>

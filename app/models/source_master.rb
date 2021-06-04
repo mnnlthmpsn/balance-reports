@@ -1,0 +1,2 @@
+class SourceMaster < ApplicationRecord
+end

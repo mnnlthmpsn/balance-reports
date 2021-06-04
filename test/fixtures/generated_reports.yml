@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cost_upload_id: MyString
+  report_file_name: MyString
+  report_file_path: MyText
+  active_status: false
+  del_status: false
+  user_id: 1
+
+two:
+  cost_upload_id: MyString
+  report_file_name: MyString
+  report_file_path: MyText
+  active_status: false
+  del_status: false
+  user_id: 1
